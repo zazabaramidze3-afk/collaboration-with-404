@@ -1,5 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #fff;
+}
+
+.header-container {
+  width: 90%;
+  height: 8.6rem;
+  background-color: #052A44;
+  color: #fff;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem;
+}
+.header-container .header-logo a {
+  color: #fff;
+}
+.header-container .header-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.header-container .header-links li a {
+  color: #fff;
+}
+
+.header-action button {
+  background: none;
 }
 
 /*# sourceMappingURL=style.css.map */

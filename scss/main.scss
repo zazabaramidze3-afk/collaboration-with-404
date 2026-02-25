@@ -1,4 +1,43 @@
 
+@use './base/reset';
 @use './abstract/variables';
+@use './abstract/mixins';
 
 
+body{
+    background-color: variables.$body-bg-color-light;
+}
+
+.header-container{
+    width: 90%;
+    height: 8.6rem;
+    background-color: variables.$header-bg-color;
+    color: variables.$body-bg-color-light;
+    margin: 5rem auto;
+    @include mixins.flex-spasebetween();
+    padding: 2.4rem;
+
+    .header-logo a{
+        color: variables.$body-bg-color-light;
+
+    }
+    
+
+
+    .header-links{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        
+        li a{
+            color: variables.$body-bg-color-light;
+        }
+        
+
+    }
+}
+
+.header-action button {
+    background: none;
+
+}
