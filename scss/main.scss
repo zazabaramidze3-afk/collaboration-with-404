@@ -1,12 +1,10 @@
 
 @use './base/reset';
+@use '../assets/fonts/fonts.scss';
 @use './abstract/variables';
 @use './abstract/mixins';
+@use './themes/change-theme';
 
-
-body{
-    background-color: variables.$body-bg-color-light;
-}
 
 .header-container{
     width: 90%;
@@ -16,28 +14,204 @@ body{
     margin: 5rem auto;
     @include mixins.flex-spasebetween();
     padding: 2.4rem;
+    border-radius: 1.2rem;
+
+    input{
+        display: none;
+    }
+
 
     .header-logo a{
         color: variables.$body-bg-color-light;
-
+        font-family: "Poppins", sans-serif;
+        font-size: 2rem;
+        transition: color 0.3s ease;
+        &:hover{
+                color: variables.$banner-bg-color;
+            }     
     }
-    
-
 
     .header-links{
         display: flex;
         justify-content: center;
-        gap: 1rem;
+        gap: 3.5rem;
         
         li a{
             color: variables.$body-bg-color-light;
+            font-size: 1.6rem;
+            transition: color 0.3s ease;
+
+            &:hover{
+                color: variables.$banner-bg-color;
+            }
+
         }
         
 
     }
 }
 
-.header-action button {
-    background: none;
+.header-action {
+    @include mixins.flex();
+    gap: 2rem;
 
+
+
+    button:nth-child(1) {
+        background: none;
+    }
+    button:nth-child(2) {
+        background: none;
+        color: #fff;
+        font-size: 1.6rem;
+    }
+    button:nth-child(3) {
+        background-color: #fff;
+        color: #000000;
+        font-size: 1.6rem;
+        font-family: "Poppins", sans-serif;
+        padding: 1.5rem 4.3rem;
+        border: none;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        
+            &:hover {
+                background-color: variables.$banner-bg-color;
+                color: #fff;
+            }
+
+
+
+    }
+}
+
+.header-logo .logo-subtitle {
+    display: none;
+}
+
+.header-action .burger,.change-theme-darck {
+    display: none;
+}
+
+
+
+
+
+@media(max-width:768px){
+    .header-logo .logo-subtitle{
+        display: block;
+    }
+    .header-logo .logo, .header-action button{
+        display: none;
+    }
+    .header-container{
+        background-color: variables.$body-bg-color-light;
+        color: variables.$body-bg-color-light;
+
+    }
+    .header-container .header-links{
+        display: none;
+    }
+    .header-action .burger{
+        display: block;
+        background: none;
+    }
+    .header-action .change-theme-darck{
+        display: block;
+        background: none;
+
+    }   
+
+}
+
+@media(max-width:925px){
+    .header-logo .logo{
+        display: none;       
+    }
+   
+}
+
+
+
+
+/*  */
+
+.footer{
+  background-color: #f2f2f2;
+  padding: 40px 0 20px;
+  font-family: Arial,sans-serif;
+  color: #333;
+}
+.footer-container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.footer-section{
+  max-width: 300px;
+}
+.brand{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.footer-section p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+.center{
+  text-align: center;
+}
+.social-title {
+  margin-bottom: 10px;
+}
+.social-icons{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.social-icons a{
+  width: 32px;
+  height: 32px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.social-icons a:hover{
+  background-color: #333;
+  color: white;
+}
+hr{
+  margin: 25px 0 10px;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+.footer-divider {
+  margin: 25px 0 10px;
+  height: 1px;
+  background-color: #ccc;
+}
+.footer-line {
+  border: none;
+  height: 1px;
+  background-color: #d6d6d6;
+  margin: 25px 0 15px;
+}
+.footer-bottom{
+  text-align: center;
+  font-size: 13px;
+  color: #555;
+  padding-top: 5px ;
 }
