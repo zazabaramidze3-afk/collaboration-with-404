@@ -1,4 +1,5 @@
 @use '../abstract/variables';
+@use '../abstract/mixins';
 
 $margin-left:10px;
 $margin-top:40px;
@@ -55,6 +56,29 @@ a{
     li{
     list-style: none;
 }
+}
+
+.popover-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popover-list li button {
+    @include mixins.flex();
+    background-color: #000000 !important;
+    color: #ffffff !important;    
+    border: none; 
+    border-radius: 8px;
+    padding: 1.5rem 3.5rem; 
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+    transition:color 0.2s ease,background-color 0.2s ease;
+}
+.popover-list li button:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
 }
 
 #my-popover{
