@@ -4,13 +4,16 @@
 @use './abstract/variables';
 @use './abstract/mixins';
 @use './themes/change-theme';
+@use './components/burger';
 
 
 .header-container{
     width: 90%;
     height: 8.6rem;
-    background-color: variables.$header-bg-color;
-    color: variables.$body-bg-color-light;
+    // background-color: variables.$header-bg-color;
+    // color: variables.$body-bg-color-light;
+    background-color: variables.$header-bg-color; 
+    color: variables.$header-text-color;
     margin: 5rem auto;
     @include mixins.flex-spasebetween();
     padding: 2.4rem;
@@ -54,11 +57,13 @@
 .header-action {
     @include mixins.flex();
     gap: 2rem;
+    position: relative;
 
 
 
     button:nth-child(1) {
         background: none;
+        
     }
     button:nth-child(2) {
         background: none;
@@ -97,6 +102,13 @@
 
 
 
+@media(max-width:950px){
+    .header-logo .logo{
+        display: none;       
+    } 
+   
+}
+
 @media(max-width:768px){
     .header-logo .logo-subtitle{
         display: block;
@@ -105,33 +117,24 @@
         display: none;
     }
     .header-container{
-        background-color: variables.$body-bg-color-light;
+        background-color: lighten(variables.$body-bg-color-light,0%);
         color: variables.$body-bg-color-light;
 
     }
     .header-container .header-links{
         display: none;
     }
-    .header-action .burger{
-        display: block;
+    .header-action .burger-menu{
+        display: flex;
         background: none;
     }
     .header-action .change-theme-darck{
         display: block;
         background: none;
 
-    }   
+    } 
 
 }
-
-@media(max-width:925px){
-    .header-logo .logo{
-        display: none;       
-    }
-   
-}
-
-
 
 
 /*  */

@@ -28,8 +28,25 @@
                 <label for="darck-theme"><img src="assets/img/moon.png" alt=""></label>
                 <button>Sign In</button>
                 <button>Free Trial</button>
-                <label for="light-theme" class="change-theme-darck"><img src="assets/img/darcktheme.png" alt="darck"></label>
-                <label for="" class="burger"><img src="assets/img/burger.png" alt="burger"></label>
+                <label for="light-theme" class="change-theme-darck"></label>
+                <!-- <label for="" class="burger"><img src="assets/img/burger.png" alt="burger"></label> -->
+                <button class="burger-menu" popovertarget="my-popover">
+                    <div class="span">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div popover id="my-popover">
+                    <nav>
+                        <ul class="popover-list">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About US</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>
 
