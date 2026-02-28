@@ -1,14 +1,18 @@
+@use '../abstract/variables';
+
 .our-services-section, .stories-section {
   padding: 60px 20px;
-  background-color: $white;
+  background-color:variables.$white;
 
   .section-content, .stories-content {
     width: 90%;
-    height: 65rem;
-    background-color: $primary-bg;
-    border-radius: $border-radius;
+    // height: 65rem;
+    margin: 0 auto;
+    background-color: variables.$primary-bg;
+    border-radius: variables.$border-radius;
     padding: 80px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 60px;
     position: relative;
@@ -40,7 +44,7 @@
         font-size: 18px;
         font-family: 'Poppins', sans-serif;
         line-height: 1.6;
-        color: $text-color;
+        color: variables.$text-color;
         margin-bottom: 25px;
       }
 
@@ -63,6 +67,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            background: none;
             
             
             img {
@@ -74,18 +79,18 @@
       }
 
       .btn {
-        background-color: $dark-blue;
-        color: $white;
+        background-color:variables.$dark-blue;
+        color: variables.$white;
         border: none;
         padding: 15px 40px;
         border-radius: 8px;
         font-size: 16px;
         font-weight: 600;
         cursor: pointer;
-        transition: background 0.3s ease;
+        transition: background-color 0.3s ease;
 
         &:hover {
-          background-color: lighten($dark-blue, 10%);
+          background-color: lighten(variables.$dark-blue, 10%);
         }
       }
     }
