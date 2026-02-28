@@ -1,0 +1,100 @@
+.our-services-section, .stories-section {
+  padding: 60px 20px;
+  background-color: $white;
+
+  .section-content, .stories-content {
+    width: 90%;
+    height: 65rem;
+    background-color: $primary-bg;
+    border-radius: $border-radius;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    overflow: hidden;
+
+    
+    .images {
+      flex: 1;
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    
+    .our-services-section-container, .stories-section-container {
+      flex: 1;
+
+      h1 {
+        font-size: variables.$h1-size;
+        font-family: 'Poppins', sans-serif;
+        color: #000;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 18px;
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        color: $text-color;
+        margin-bottom: 25px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 35px;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          font-size: 18px;
+          font-weight: 500;
+          margin-bottom: 15px;
+
+          .icon {
+            width: 90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+
+      .btn {
+        background-color: $dark-blue;
+        color: $white;
+        border: none;
+        padding: 15px 40px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background-color: lighten($dark-blue, 10%);
+        }
+      }
+    }
+  }
+}
+
+
+.stories-section {
+  .stories-content {
+    flex-direction: row-reverse; 
+  }
+}
