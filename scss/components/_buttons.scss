@@ -1,0 +1,15 @@
+@use '../abstract/variables';
+
+
+%action-button {
+  display: inline-block;
+  background-color: variables.$body-bg-color-darck;
+  color:variables.$header-text-color;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+
+  &:hover{
+    background-color: #000;
+  }
+}

@@ -219,6 +219,18 @@ a {
     transform: translateX(0px);
   }
 }
+.about-cards-action button, .career-container .action button {
+  display: inline-block;
+  background-color: #052A44;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+.about-cards-action button:hover, .career-container .action button:hover {
+  background-color: #000;
+}
+
 .header-container {
   width: 90%;
   height: 8.6rem;
@@ -326,18 +338,6 @@ a {
     display: none;
   }
 }
-.about-cards-action button, .career-container .action button {
-  display: inline-block;
-  background-color: #052A44;
-  color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-.about-cards-action button:hover, .career-container .action button:hover {
-  background-color: #000;
-}
-
 /* career container*/
 .career-container {
   width: 90%;
