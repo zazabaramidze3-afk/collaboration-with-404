@@ -54,6 +54,16 @@ body:has(#darck-theme:checked) .about-us{
     color: black;
     background-color: #052A44; 
 }
+
+body:has(#darck-theme:checked) .our-services-section, .stories-section{
+    color: black;
+    background-color: #052A44; 
+}
+body:has(#darck-theme:checked) .stories-section{
+    color: black;
+    background-color: #052A44; 
+}
+
 body:has(#darck-theme:checked) .contact-section{
     color: black; 
 }
