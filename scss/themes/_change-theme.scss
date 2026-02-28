@@ -8,15 +8,16 @@ body:has(#light-theme:checked) {
         background-image: url('/assets/img/moon.png');
     }
 }
-body:has(#light-theme:checked) *{
-    color: black;
-}
+// body:has(#light-theme:checked) *{
+//     color: black;
+// }
 
 body:has(#darck-theme:checked) {
     background-color:variables.$body-bg-color-darck;
     header button{
         color: rgb(0, 0, 0);
     }
+    
     header{
         background-color: lighten(variables.$header-bg-color,10%);
     }
@@ -30,9 +31,43 @@ body:has(#darck-theme:checked) {
         }
     }
 }
-body:has(#darck-theme:checked) *{
-    color:white;
+// body:has(#darck-theme:checked) *{
+//     color:white;
     
+// }
+
+// body:has(#darck-theme:checked){
+//     .about-us{
+//         color: black;
+//     }
+
+// }
+
+
+body:has(#darck-theme:checked) {
+    color: white;
+    background-color: #052A44; 
+}
+
+
+body:has(#darck-theme:checked) .about-us{
+    color: black;
+    background-color: #052A44; 
+}
+body:has(#darck-theme:checked) .contact-section{
+    color: black; 
+}
+
+body:has(#darck-theme:checked) .about-us .about-top{
+    color: rgb(255, 255, 255);
+    background-color: #052A44; 
+}
+
+body:has(#darck-theme:checked) .career-container {
+    color: rgb(255, 255, 255);
+}
+body:has(#darck-theme:checked) .footer .footer-container{
+    color: rgb(255, 255, 255);
 }
 
 
