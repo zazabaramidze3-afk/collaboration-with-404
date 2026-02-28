@@ -304,6 +304,104 @@ a {
     background: none;
   }
 }
+.career-container .action button {
+  display: inline-block;
+  background-color: #052A44;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+.career-container .action button:hover {
+  background-color: #000;
+}
+
+/* career container*/
+.career-container {
+  width: 90%;
+  color: #000;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2.4rem;
+  margin-top: 10rem;
+}
+
+.career-container .left-side mark {
+  color: #E8DB84;
+  background: none;
+}
+
+.career-container .left-side h2 {
+  font-size: 4.8rem;
+}
+
+.career-container .left-side p {
+  font-size: 1.8rem;
+  font-family: "Poppins";
+  max-width: 57rem;
+  padding: 1.5rem;
+}
+
+.career-container .action {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.career-container .action a {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+
+.career-container .action img {
+  width: 5.3rem;
+  height: auto;
+}
+
+.career-container .left-side .students {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.career-container .right-side {
+  max-width: 60rem;
+  background-color: #E8DB84;
+  border-radius: 2rem;
+  padding-left: 5rem;
+  transition: transform 0.3s ease;
+}
+.career-container .right-side:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.career-container .right-side .career-banner img {
+  width: 30rem;
+}
+
+.right-side .career-cards {
+  position: relative;
+}
+
+.right-side .career-cards .card-wrapper {
+  position: absolute;
+  top: -30px;
+  left: -15rem;
+}
+
+@media (max-width: 768px) {
+  .career-container .right-side .career-cards .card-wrapper {
+    top: -30px;
+    left: -10rem;
+  }
+}
 /*  */
 .footer {
   background-color: #f2f2f2;
