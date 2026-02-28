@@ -1,0 +1,132 @@
+@use '../abstract/mixins';
+@use '../abstract/variables';
+
+
+.header-container{
+    width: 90%;
+    height: 8.6rem;
+    // background-color: variables.$header-bg-color;
+    // color: variables.$body-bg-color-light;
+    background-color: variables.$header-bg-color; 
+    color: variables.$header-text-color;
+    margin: 5rem auto;
+    @include mixins.flex-spasebetween();
+    padding: 2.4rem;
+    border-radius: 1.2rem;
+
+    input{
+        display: none;
+    }
+
+
+    .header-logo a{
+        color: variables.$body-bg-color-light;
+        font-family: variables.$base-font;
+        font-size: 2rem;
+        transition: color 0.3s ease;
+        &:hover{
+                color: variables.$banner-bg-color;
+            }     
+    }
+
+    .header-links{
+        display: flex;
+        justify-content: center;
+        gap: 3.5rem;
+        
+        li a{
+            color: variables.$body-bg-color-light;
+            font-size: 1.6rem;
+            transition: color 0.3s ease;
+
+            &:hover{
+                color: variables.$banner-bg-color;
+            }
+
+        }
+        
+
+    }
+}
+
+.header-action {
+    @include mixins.flex();
+    gap: 2rem;
+    position: relative;
+
+
+
+    button:nth-child(1) {
+        background: none;
+        
+    }
+    button:nth-child(2) {
+        background: none;
+        color: #fff;
+        font-size: 1.6rem;
+    }
+    button:nth-child(3) {
+        background-color: #fff;
+        color: #000000;
+        font-size: 1.6rem;
+        font-family: "Poppins", sans-serif;
+        padding: 1.5rem 4.3rem;
+        border: none;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        
+            &:hover {
+                background-color: variables.$banner-bg-color;
+                color: #fff;
+            }
+
+
+
+    }
+}
+
+.header-logo .logo-subtitle {
+    display: none;
+}
+
+.header-action .burger,.change-theme-darck {
+    display: none;
+}
+
+@media(max-width:950px){
+    .header-logo .logo{
+        display: none;       
+    } 
+   
+}
+
+@media(max-width:768px){
+    .header-logo .logo-subtitle{
+        display: block;
+    }
+    .header-logo .logo, .header-action button{
+        display: none;
+    }
+    .header-container{
+        background-color: lighten(variables.$body-bg-color-light,0%);
+        color: variables.$body-bg-color-light;
+
+    }
+    .header-container .header-links{
+        display: none;
+    }
+    .header-action .burger-menu{
+        display: flex;
+        background: none;
+    }
+    .header-action .change-theme-darck{
+        display: block;
+        background: none;
+
+    }
+    .elipse{
+      display: none;
+    } 
+
+}
+

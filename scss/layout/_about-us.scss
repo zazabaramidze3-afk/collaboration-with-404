@@ -1,0 +1,92 @@
+
+@use '../abstract/mixins';
+@use '../abstract/variables';
+@use '../components/buttons';
+
+/* about us */
+.abou-us{
+  width: 90%;
+  color: #000;
+  margin: 5rem auto;
+  @include mixins.flex-spasebetween();
+  flex-wrap: wrap;
+  // flex-direction: column;
+  gap: 1rem;
+  padding: 2.4rem;
+  margin-top: 10rem;
+}
+.about-top{
+  @include mixins.flex();
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.about-top h2{
+  font-size: 4.2rem;
+  font-weight: 600;
+  font-family: variables.$base-font;
+  
+  }
+.about-top p{
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-family:#071210;
+  font-family: variables.$base-font;
+  width: clamp(10rem, 80vw, 100rem);
+  
+  }
+
+  .about-cards-container{
+    @include mixins.flex();
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 4rem;
+  }
+
+ .about-cards-action{
+     @include mixins.flex();
+     margin-top:6rem; 
+
+ }
+ 
+  .about-cards-action button{
+    @extend %action-button;
+  }
+
+  .about-card{
+    width: 30rem;
+    height: 30rem;
+    background-color: #ffffff;
+    box-shadow: 2px 4px 38px 0px #00000014;
+    @include mixins.flex();
+    flex-direction: column;
+    border-radius: 1.6rem;
+    transition: transform 0.3s ease;
+    position: relative;
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 3px 0px 10px rgba($color: #0000004d, $alpha: 0.5);
+      }
+
+
+    strong{
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    p{
+      color: #071210;
+      font-size: 1.6rem;
+      font-weight: 400;
+      text-align: center;
+    }
+        & img:nth-child(1) {
+          position: absolute;
+          top: -6rem;
+        }
+        & img:nth-child(2) {
+          position: absolute;
+          top: 25rem;
+          left: -2rem;
+          z-index: -1;
+        }
+  }
