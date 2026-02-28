@@ -304,7 +304,6 @@ a {
     background: none;
   }
 }
-
 .career-container .action button {
   display: inline-block;
   background-color: #052A44;
@@ -403,8 +402,7 @@ a {
     left: -10rem;
   }
 }
-/*  */
-/* Contact Us Section */
+/* contact us*/
 .contact-section {
   padding: 60px 0;
 }
@@ -477,7 +475,6 @@ textarea {
 .contact-button:hover {
   background-color: #0c2238;
 }
-
 /* Footer */
 .footer {
   background-color: #f2f2f2;
